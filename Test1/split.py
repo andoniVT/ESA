@@ -1,6 +1,8 @@
 import re
 from itertools import groupby
 
+file = "resource/big2.txt"
+
 def viterbi_segment(text):
     probs, lasts = [1.0], [0]
     for i in range(1, len(text) + 1):
@@ -19,7 +21,7 @@ def viterbi_segment(text):
 def word_prob(word): return dictionary.get(word, 0) / total
 def words(text): return re.findall('[a-z]+', text.lower()) 
 dictionary = dict((w, len(list(ws)))
-                  for w, ws in groupby(sorted(words(open('big2.txt').read()))))
+                  for w, ws in groupby(sorted(words(open(file).read()))))
 max_word_length = max(map(len, dictionary))
 total = float(sum(dictionary.values()))
 

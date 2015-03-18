@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
 '''
 Created on 18/3/2015
 
 @author: ucsp
 '''
-
-# -*- coding: utf-8 -*-
 import re
 import unicodedata
 from unicodedata import normalize
