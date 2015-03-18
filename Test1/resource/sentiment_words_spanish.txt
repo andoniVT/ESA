@@ -1,6 +1,7 @@
 abandon==-2
 ability==1
 abomin==-2
+arruin==-2
 aborrec==-2
 abort==-2
 abraz==1
