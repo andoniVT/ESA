@@ -95,7 +95,21 @@ class EManager():
                     suma=0.0
                     n=0
                     print ""
-                    
+    
+    def polarity_rule(self, value):
+        if value>0: return "positivo"
+        if value<0: return "negativo"
+        if value==0: return "neutral"
+         
+    
+    def get_entity_polarity(self, lista_entidades):
+        for i in lista_entidades:
+            for j in self.__entities:
+                if i == j[0]:        
+                    position = len(j[1])-1
+                    polarity = self.polarity_rule(j[1][position][2])  
+                    print i + " : "  + polarity  
+                                            
     def print_entities(self):
         for i in self.__entities:
             for j in i:
@@ -105,15 +119,18 @@ class EManager():
 if __name__ == '__main__':
     
     manager = EManager()
+    
+    manager.get_entity_polarity(["movistar" , "empresa", "celulares"])
+    
     #manager.add_entity("movistar")
-    atributo = ["el presidente arruino todo" , "president arruin todo" , 0]
+    #atributo = ["el presidente arruino todo" , "president arruin todo" , 0]
     #manager.add_attribute("movistar", atributo)
     
     #manager.add_entity("empresa")
     #manager.add_attribute("empresa" , atributo)
     
-    manager.find_polarity(["movistar" , "empresa, claro"])
-    manager.print_entities()
+    #manager.find_polarity(["movistar" , "empresa, claro"])
+    #manager.print_entities()
     
     
     
