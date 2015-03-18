@@ -9,23 +9,71 @@ p6
 aS'movist pesim empres embarg'
 p7
 aF-0.5
-aaaa(lp8
-S'empresa'
+aa(lp8
+S'movistar es un desastre ,'
 p9
-a(lp10
-(lp11
+aS'movist desastr'
+p10
+aF-1
+aaaa(lp11
+S'empresa'
+p12
+a(lp13
+(lp14
 g6
 aS'movist pesim empres embarg'
-p12
+p15
 aF-0.5
-aaaa(lp13
-S'celulares'
-p14
-a(lp15
-(lp16
-S'me gustan sus celulares'
+aa(lp16
+S'empresa horrible ,'
 p17
-aS'gust celular'
+aS'empres horribl'
 p18
+aF-1
+aaaa(lp19
+S'celulares'
+p20
+a(lp21
+(lp22
+S'me gustan sus celulares'
+p23
+aS'gust celular'
+p24
 aF0.5
+aa(lp25
+S'todos sus celulares son malos ,'
+p26
+aS'celular mal'
+p27
+aF-0.5
+aaaa(lp28
+S'presidente'
+p29
+a(lp30
+(lp31
+S'el presidente arruino las cosas pero'
+p32
+aS'president arruin cos'
+p33
+aF-0.66666666666666663
+aaaa(lp34
+S'ministro'
+p35
+a(lp36
+(lp37
+S'el ministro es bueno'
+p38
+aS'ministr buen'
+p39
+aF0.5
+aaaa(lp40
+S'claro'
+p41
+a(lp42
+(lp43
+S'mejor es claro'
+p44
+aS'mejor clar'
+p45
+aF1
 aaaa.
