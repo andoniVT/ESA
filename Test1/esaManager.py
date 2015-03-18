@@ -39,8 +39,8 @@ class EntitySA(object):
         
 if __name__ == '__main__':
     
-    p = "movistar es un desastre , todos sus celulares son malos , empresa horrible , mejor es claro"
-    entidades_detectadas = ["movistar" , "celulares" , "empresa" , "claro"]
+    p = "la seleccion cada vez juega peor. la seleccion la amo"
+    entidades_detectadas = ["seleccion"]
     
     manager = EntitySA()
     manager.classify(p, entidades_detectadas)

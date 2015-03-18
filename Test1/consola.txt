@@ -1,0 +1,18 @@
+seleccion
+1.0
+
+seleccion : positivo
+movistar
+[['movistar es una pesima empresa sin embargo', 'movist pesim empres embarg', -0.5], ['movistar es un desastre ,', 'movist desastr', -1.0]]
+empresa
+[['movistar es una pesima empresa sin embargo', 'movist pesim empres embarg', -0.5], ['empresa horrible ,', 'empres horribl', -1.0]]
+celulares
+[['me gustan sus celulares', 'gust celular', 0.5], ['todos sus celulares son malos ,', 'celular mal', -0.5]]
+presidente
+[['el presidente arruino las cosas pero', 'president arruin cos', -0.6666666666666666]]
+ministro
+[['el ministro es bueno', 'ministr buen', 0.5]]
+claro
+[['mejor es claro', 'mejor clar', 1.0]]
+seleccion
+[['la seleccion cada vez juega peor.', 'seleccion cad vez jueg peor', 1.0], ['la seleccion la amo', 'seleccion amo', 1.0]]
