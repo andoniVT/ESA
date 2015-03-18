@@ -4,47 +4,28 @@ S'movistar'
 p3
 a(lp4
 (lp5
-S'el presidente arruino todo'
+S'movistar es una pesima empresa sin embargo'
 p6
-aS'president arruin todo'
+aS'movist pesim empres embarg'
 p7
-aI0
-aa(lp8
-S'el presidente arruino todo'
-p9
-aS'president arruin todo'
-p10
-aI0
-aa(lp11
-S'el presidente arruino todo'
-p12
-aS'president arruin todo'
-p13
-aI0
-aa(lp14
-S'el presidente arruino todo'
-p15
-aS'president arruin todo'
-p16
-aI0
-aaaa(lp17
-S'claro'
-p18
-a(lp19
-(lp20
-S'el presidente arruino todo'
-p21
-aS'president arruin todo'
-p22
-aI0
-aaaa(lp23
+aF-0.5
+aaaa(lp8
 S'empresa'
-p24
-a(lp25
-(lp26
-S'el presidente arruino todo'
-p27
-aS'president arruin todo'
-p28
-aI0
+p9
+a(lp10
+(lp11
+g6
+aS'movist pesim empres embarg'
+p12
+aF-0.5
+aaaa(lp13
+S'celulares'
+p14
+a(lp15
+(lp16
+S'me gustan sus celulares'
+p17
+aS'gust celular'
+p18
+aF0.5
 aaaa.
