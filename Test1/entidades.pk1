@@ -1,24 +1,33 @@
 (lp1
 (lp2
-S'jose'
+S'Barza'
 p3
 a(lp4
 (lp5
-S'jose juega muy'
+S'El Barza en 7 dias ha quedado fuera de la lucha por los titulos.'
 p6
-aS'jos jueg'
+aS'barz dias qued luch titul .'
 p7
 aI00
 aF0
 aaaa(lp8
-S'juan'
+S'titulos'
 p9
 a(lp10
 (lp11
-S'juan no es malo jugando'
-p12
-aS'juan no mal jug'
+g6
+ag7
+aI00
+aF0
+aaaa(lp12
+S'plantilla'
 p13
-aI01
-aF0.25
+a(lp14
+(lp15
+S'Hacen falta cambios tanto en la plantilla como en el estilo'
+p16
+aS'hac falt cambi plantill estil'
+p17
+aI00
+aF-0.20000000000000001
 aaaa.

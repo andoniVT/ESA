@@ -23,14 +23,18 @@ class EntitySA(object):
             em.add_entity(i)
         
         for i in segmentos:
+            proc = CP(i,True)            
+            texto_sin_signos = proc.remove_punctuation(i)
             for j in entidades_detectadas:
-                words = i.split()
+                words = texto_sin_signos.split()
                 for k in words:
-                    if k == j:
-                        proc = CP(i,True)
+                    if k == j:                        
                         text = proc.get_processed_comment()
-                        negation = proc.has_negation()                        
+                        negation = proc.has_negation()
+                        print text
+                        print negation
                         atributo = [i, text, negation , "NULL"]
+                        print atributo
                         em.add_attribute(j, atributo)
         
         em.find_polarity(entidades_detectadas)  
@@ -40,8 +44,10 @@ class EntitySA(object):
         
 if __name__ == '__main__':
     
-    p = "jose juega muy bien el futbol y juan no es malo jugando"
-    entidades_detectadas = ["jose" , "juan"]
+    p = "El Barza en 7 dias ha quedado fuera de la lucha por los titulos. Hacen falta cambios tanto en la plantilla como en el estilo"
+    #p = "movistar es una pesima empresa sin embargo me gustan sus celulares"
+    entidades_detectadas = ["Barza" , "titulos" , "plantilla"]
+    #entidades_detectadas = ["movistar" , "empresa" , "celulares"]
     
     manager = EntitySA()
     manager.classify(p, entidades_detectadas)

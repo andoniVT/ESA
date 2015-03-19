@@ -17,8 +17,8 @@ class Segmentation(object):
         self.terminators = ['.', '!', '?' , ',' , ';' ,'pero' , 'sin embargo' , 'no obstante', 'por el contrario' ,
                                'en cambio' , 'con todo' , 'de todas maneras' , 'aunque', 'tampoco' ,
                                 'porque' , 'por esta razon', 'por consiguiente' ,'asi pues' , 'de ahi que', 
-                                'asi que', 'de modo que', 'es decir' , 'o sea', 'esto es', 'mejor dicho', 
-                                'por ejemplo' , 'y']
+                                'asi que', 'de modo que', 'es decir' , 'yy' , 'o sea', 'esto es', 'mejor dicho', 
+                                'por ejemplo' , 'oo' ]
         self.wrappers = ['"', "'", ')', ']', '}']
         self.sentence = sentence
     
@@ -50,6 +50,15 @@ class Segmentation(object):
         return end 
     
     def find_sentences(self):
+        especial_terminators = ["o" , "y" , "u"]
+        list_sentence = self.sentence.split()
+        sentence = ""
+        for i in list_sentence:
+            if i in especial_terminators:
+                i = i+i
+            sentence = sentence + i + " "
+        self.sentence = sentence  
+                
         end = True
         sentences = []
         while end > -1:
@@ -63,7 +72,7 @@ class Segmentation(object):
         
 if __name__ == '__main__':
     
-    seg = Segmentation("movistar es una pesima empresa sin embargo me gustan sus celulares")
+    seg = Segmentation("El Barza en 7 dias ha quedado fuera de la lucha por los titulos. Hacen falta cambios tanto en la plantilla como en el estilo")
     segmentos = seg.find_sentences()
     for i in segmentos:
         print i 

@@ -83,6 +83,8 @@ class EManager():
             for e in lista_entidades:
                 if i[0] == e:
                     posicion = len(i[1])-1
+                    print posicion
+                    print i[0]
                     sentence = i[1][posicion][1]
                     list_sentence = sentence.split()
                     for j in list_sentence:

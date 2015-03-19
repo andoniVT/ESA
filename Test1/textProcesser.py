@@ -127,6 +127,15 @@ class Comment_proccesor(object):
                 return True
         return False
         
+    def remove_punctuation(self, comentario):
+        signos = ['$' , '1' , '2'  , '4' , '5' , '6' , '7' , '¿' , '¡' , ',']
+        for c in signos:
+            comentario = comentario.replace(c , "")
+
+        for c in string.punctuation:
+            comentario = comentario.replace(c , "")
+        return comentario
+    
     def process_comment(self , comentario):
         comentario = self.remove_accent(comentario)
         comentario = comentario.strip('RT')
@@ -136,13 +145,7 @@ class Comment_proccesor(object):
         comentario = re.sub('[\s]+', ' ', comentario)
         comentario = self.processHashTag(comentario)
         comentario = comentario.strip('\'"')
-        signos = ['$' , '1' , '2'  , '4' , '5' , '6' , '7' , '¿' , '¡' , ',']
-        
-        for c in signos:
-            comentario = comentario.replace(c , "")
-
-        for c in string.punctuation:
-            comentario = comentario.replace(c , "")
+                
         
         pattern = re.compile(r"(.)\1{1,}", re.DOTALL)
         
