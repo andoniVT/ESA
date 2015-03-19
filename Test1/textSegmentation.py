@@ -15,10 +15,10 @@ class Segmentation(object):
     def __init__(self , sentence):
         self.abbreviations = {'dr.': 'doctor', 'sr.': 'senior',  'sra.': 'seniora', 'srta.': 'seniorita', 'vs.': 'versus'}
         self.terminators = ['.', '!', '?' , ',' , ';' ,'pero' , 'sin embargo' , 'no obstante', 'por el contrario' ,
-                               'en cambio' , 'ahora bien' , 'con todo' , 'de todas maneras' , 'aunque', 'tampoco' ,
+                               'en cambio' , 'con todo' , 'de todas maneras' , 'aunque', 'tampoco' ,
                                 'porque' , 'por esta razon', 'por consiguiente' ,'asi pues' , 'de ahi que', 
                                 'asi que', 'de modo que', 'es decir' , 'o sea', 'esto es', 'mejor dicho', 
-                                'por ejemplo']
+                                'por ejemplo' , 'y']
         self.wrappers = ['"', "'", ')', ']', '}']
         self.sentence = sentence
     

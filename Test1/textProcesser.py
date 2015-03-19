@@ -20,8 +20,9 @@ class Comment_proccesor(object):
     def __init__(self, comment , flag):
         self.__comment = comment
         self.__flag = flag
-        self.__new_comment = self.process_comment(self.__comment)
         self.__negation = False
+        self.__new_comment = self.process_comment(self.__comment)
+        
 
     def remove_accent(self , word):
         word= word.replace("á", "a")
@@ -145,7 +146,6 @@ class Comment_proccesor(object):
         
         pattern = re.compile(r"(.)\1{1,}", re.DOTALL)
         
-        
         self.__negation = self.detect_negation(comentario)
                 
         if self.__flag:
@@ -183,6 +183,7 @@ if __name__ == '__main__':
     for i in comentarios:
         procesador = Comment_proccesor(i , True)
         print procesador.get_processed_comment()
+        print procesador.has_negation()
 
 
 

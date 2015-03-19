@@ -72,8 +72,8 @@ class EManager():
         for i in self.__entities:
             if i[0] == nombre_entidad:
                 for j in i[1]:
-                    if j[2] == "NULL":
-                        j[2] = value
+                    if j[3] == "NULL":
+                        j[3] = value
         self.save_file(self.__entities)
     
     def find_polarity(self, lista_entidades):
@@ -89,6 +89,8 @@ class EManager():
                         suma+=self.load_value(j)
                         n+=1
                     value = suma/n
+                    if i[1][posicion][2]:
+                        value = -value
                     print i[0]
                     print value
                     self.update_polarity(i[0], value)
@@ -107,7 +109,7 @@ class EManager():
             for j in self.__entities:
                 if i == j[0]:        
                     position = len(j[1])-1
-                    polarity = self.polarity_rule(j[1][position][2])  
+                    polarity = self.polarity_rule(j[1][position][3])  
                     print i + " : "  + polarity  
                                             
     def print_entities(self):

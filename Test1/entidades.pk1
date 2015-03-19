@@ -1,121 +1,24 @@
 (lp1
 (lp2
-S'movistar'
+S'jose'
 p3
 a(lp4
 (lp5
-S'movistar es una pesima empresa sin embargo'
+S'jose juega muy'
 p6
-aS'movist pesim empres embarg'
+aS'jos jueg'
 p7
-aF-0.5
-aa(lp8
-S'movistar es un desastre ,'
+aI00
+aF0
+aaaa(lp8
+S'juan'
 p9
-aS'movist desastr'
-p10
-aF-1
-aaaa(lp11
-S'empresa'
+a(lp10
+(lp11
+S'juan no es malo jugando'
 p12
-a(lp13
-(lp14
-g6
-aS'movist pesim empres embarg'
-p15
-aF-0.5
-aa(lp16
-S'empresa horrible ,'
-p17
-aS'empres horribl'
-p18
-aF-1
-aaaa(lp19
-S'celulares'
-p20
-a(lp21
-(lp22
-S'me gustan sus celulares'
-p23
-aS'gust celular'
-p24
-aF0.5
-aa(lp25
-S'todos sus celulares son malos ,'
-p26
-aS'celular mal'
-p27
-aF-0.5
-aaaa(lp28
-S'presidente'
-p29
-a(lp30
-(lp31
-S'el presidente arruino las cosas pero'
-p32
-aS'president arruin cos'
-p33
-aF-0.66666666666666663
-aaaa(lp34
-S'ministro'
-p35
-a(lp36
-(lp37
-S'el ministro es bueno'
-p38
-aS'ministr buen'
-p39
-aF0.5
-aaaa(lp40
-S'claro'
-p41
-a(lp42
-(lp43
-S'mejor es claro'
-p44
-aS'mejor clar'
-p45
-aF1
-aaaa(lp46
-S'seleccion'
-p47
-a(lp48
-(lp49
-S'la seleccion cada vez juega peor.'
-p50
-aS'seleccion cad vez jueg peor'
-p51
-aF1
-aa(lp52
-S'la seleccion la amo'
-p53
-aS'seleccion amo'
-p54
-aF1
-aa(lp55
-S'la seleccion es un desastre.'
-p56
-aS'seleccion desastr'
-p57
-aF-1
-aaaa(lp58
-S'jugadores'
-p59
-a(lp60
-(lp61
-S'Los jugadores juegan horrible pero'
-p62
-aS'jugador jueg horribl'
-p63
-aF-1
-aaaa(lp64
-S'hinchada'
-p65
-a(lp66
-(lp67
-S'la hinchada es lo mejor'
-p68
-aS'hinch mejor'
-p69
-aF1
+aS'juan no mal jug'
+p13
+aI01
+aF0.25
 aaaa.

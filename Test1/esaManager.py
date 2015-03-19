@@ -29,7 +29,8 @@ class EntitySA(object):
                     if k == j:
                         proc = CP(i,True)
                         text = proc.get_processed_comment()
-                        atributo = [i, text, "NULL"]
+                        negation = proc.has_negation()                        
+                        atributo = [i, text, negation , "NULL"]
                         em.add_attribute(j, atributo)
         
         em.find_polarity(entidades_detectadas)  
@@ -39,8 +40,8 @@ class EntitySA(object):
         
 if __name__ == '__main__':
     
-    p = "la seleccion es un desastre. Los jugadores juegan horrible pero la hinchada es lo mejor"
-    entidades_detectadas = ["seleccion" , "jugadores" , "hinchada"]
+    p = "jose juega muy bien el futbol y juan no es malo jugando"
+    entidades_detectadas = ["jose" , "juan"]
     
     manager = EntitySA()
     manager.classify(p, entidades_detectadas)
