@@ -13,12 +13,15 @@ import snowballstemmer
 import string
 
 stopWordFile = "resource/stopwords_spanish.txt"
+negation_words = ["no" , "ni" , "ningun" , "nadie" , "jamas" , "nada" , "nunca" , "tampoco" ]
+
 
 class Comment_proccesor(object):
     def __init__(self, comment , flag):
         self.__comment = comment
         self.__flag = flag
         self.__new_comment = self.process_comment(self.__comment)
+        self.__negation = False
 
     def remove_accent(self , word):
         word= word.replace("á", "a")
@@ -115,9 +118,16 @@ class Comment_proccesor(object):
             if len(word)>1 and (not word in stops):
                 text_list.append(word)
         return " ".join(text_list)
+    
+    def detect_negation(self, comentario):
+        lista = comentario.split()
+        for i in lista:
+            if i in negation_words:
+                return True
+        return False
         
     def process_comment(self , comentario):
-        #comentario = self.remove_accent(comentario)
+        comentario = self.remove_accent(comentario)
         comentario = comentario.strip('RT')
         comentario = comentario.lower()
         comentario = re.sub('((www\.[\s]+)|(https?://[^\s]+))','',comentario) 
@@ -134,6 +144,10 @@ class Comment_proccesor(object):
             comentario = comentario.replace(c , "")
         
         pattern = re.compile(r"(.)\1{1,}", re.DOTALL)
+        
+        
+        self.__negation = self.detect_negation(comentario)
+                
         if self.__flag:
             comentario = self.remove_stop_word(comentario)
         result = pattern.sub(r"\1\1", comentario)
@@ -145,6 +159,9 @@ class Comment_proccesor(object):
 
     def get_processed_comment(self):
         return self.__new_comment
+    
+    def has_negation(self):
+        return self.__negation
 
     
 if __name__ == '__main__':
@@ -161,7 +178,7 @@ if __name__ == '__main__':
     #print procesador.split_symbols(lista)
 
 
-    comentarios = ['La comPUtadoRa no funciona #UnAsco' , 'mas unidos que nunca @rossy' , 'horribleeee 123 no me gusta' , '¿no vale. $ la pena esto !!!']
+    comentarios = ['La comPUtadoRa  funciona #UnAsco' , 'mas unidos que nunca @rossy' , 'horribleeee 123 no me gusta' , '¿no vale. $ la pena esto !!!']
 
     for i in comentarios:
         procesador = Comment_proccesor(i , True)

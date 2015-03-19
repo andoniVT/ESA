@@ -92,4 +92,30 @@ p53
 aS'seleccion amo'
 p54
 aF1
+aa(lp55
+S'la seleccion es un desastre.'
+p56
+aS'seleccion desastr'
+p57
+aF-1
+aaaa(lp58
+S'jugadores'
+p59
+a(lp60
+(lp61
+S'Los jugadores juegan horrible pero'
+p62
+aS'jugador jueg horribl'
+p63
+aF-1
+aaaa(lp64
+S'hinchada'
+p65
+a(lp66
+(lp67
+S'la hinchada es lo mejor'
+p68
+aS'hinch mejor'
+p69
+aF1
 aaaa.
