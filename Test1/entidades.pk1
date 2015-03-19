@@ -10,24 +10,73 @@ aS'barz dias qued luch titul .'
 p7
 aI00
 aF0
-aaaa(lp8
-S'titulos'
+aa(lp8
+S'en las malas Visca Barza!'
 p9
-a(lp10
-(lp11
+aS'mal visc barz !'
+p10
+aI00
+aF-0.25
+aa(lp11
+S'en las malas Visca Barza!'
+p12
+aS'mal visc barz !'
+p13
+aI00
+aF-0.25
+aaaa(lp14
+S'titulos'
+p15
+a(lp16
+(lp17
 g6
 ag7
 aI00
 aF0
-aaaa(lp12
+aaaa(lp18
 S'plantilla'
-p13
-a(lp14
-(lp15
+p19
+a(lp20
+(lp21
 S'Hacen falta cambios tanto en la plantilla como en el estilo'
-p16
+p22
 aS'hac falt cambi plantill estil'
-p17
+p23
 aI00
 aF-0.20000000000000001
-aaaa.
+aaaa(lp24
+S'Mourinho'
+p25
+a(lp26
+(lp27
+S'Siendo un defensor del trabajo de Mourinho,'
+p28
+aS'siend defensor trabaj mourinh ,'
+p29
+aI00
+aF0.20000000000000001
+aaaa(lp30
+S'tecnico'
+p31
+a(lp32
+(lp33
+S'no dejo de admirar la naturalidad en la victoria de un tecnico como Ancelotti'
+p34
+aS'no dej admir natural victori tecnic ancelotti'
+p35
+aI01
+aF-0.42857142857142855
+aaaa(lp36
+S'Ancelotti'
+p37
+a(lp38
+(lp39
+g34
+ag35
+aI01
+aF-0.42857142857142855
+aaaa(lp40
+S'Real Madrid'
+p41
+a(lp42
+aa.

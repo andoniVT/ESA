@@ -30,9 +30,7 @@ class EntitySA(object):
                 for k in words:
                     if k == j:                        
                         text = proc.get_processed_comment()
-                        negation = proc.has_negation()
-                        print text
-                        print negation
+                        negation = proc.has_negation()                                    
                         atributo = [i, text, negation , "NULL"]
                         print atributo
                         em.add_attribute(j, atributo)
@@ -44,11 +42,13 @@ class EntitySA(object):
         
 if __name__ == '__main__':
     
-    p = "El Barza en 7 dias ha quedado fuera de la lucha por los titulos. Hacen falta cambios tanto en la plantilla como en el estilo"
+    #p = "El Barza en 7 dias ha quedado fuera de la lucha por los titulos. Hacen falta cambios tanto en la plantilla como en el estilo"
     #p = "movistar es una pesima empresa sin embargo me gustan sus celulares"
-    entidades_detectadas = ["Barza" , "titulos" , "plantilla"]
+    #p = "Siendo un defensor del trabajo de Mourinho, no dejo de admirar la naturalidad en la victoria de un tecnico como Ancelotti"
+    p = "Felicitaciones al Real Madrid, en las buenas y en las malas Visca Barza!" 
+    entidades_detectadas = ["Real Madrid" , "Barza"]
     #entidades_detectadas = ["movistar" , "empresa" , "celulares"]
-    
+    print "errores de frases"
     manager = EntitySA()
     manager.classify(p, entidades_detectadas)
     
