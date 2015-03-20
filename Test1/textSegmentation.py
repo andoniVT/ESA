@@ -72,7 +72,8 @@ class Segmentation(object):
         
 if __name__ == '__main__':
     
-    seg = Segmentation("El Barza en 7 dias ha quedado fuera de la lucha por los titulos. Hacen falta cambios tanto en la plantilla como en el estilo")
+    seg = Segmentation("Felicitaciones al Real Madrid, en las buenas y en las malas Visca Barza!")
+    
     segmentos = seg.find_sentences()
     for i in segmentos:
         print i 
