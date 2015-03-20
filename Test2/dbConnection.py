@@ -4,6 +4,8 @@ Created on 20/3/2015
 @author: ucsp
 '''
 
+# tablas: entidad - comentario
+
 import MySQLdb
 
 class Connection(object):
@@ -12,7 +14,8 @@ class Connection(object):
         self.__server = "localhost"
         self.__user = "root"
         self.__pass = "jorgeandoni"
-        self.__db = "test"
+        #self.__db = "test"
+        self.__db = "esa"
         self.__conn = MySQLdb.connect(self.__server, self.__user, self.__pass, self.__db)
     
     def test(self):
@@ -26,7 +29,7 @@ class Connection(object):
 if __name__ == '__main__':
     
     con = Connection()
-    con.test()                    
+    #con.test()                    
     
     
         
