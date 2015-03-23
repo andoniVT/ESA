@@ -145,6 +145,7 @@ class Comment_proccesor(object):
         comentario = re.sub('[\s]+', ' ', comentario)
         comentario = self.processHashTag(comentario)
         comentario = comentario.strip('\'"')
+        comentario = self.remove_punctuation(comentario)
                 
         
         pattern = re.compile(r"(.)\1{1,}", re.DOTALL)

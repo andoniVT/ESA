@@ -13,8 +13,8 @@ class Connection(object):
     def __init__(self):
         self.__server = "localhost"
         self.__user = "root"
-        #self.__pass = "jorgeandoni"
-        self.__pass = "bayern"
+        self.__pass = "jorgeandoni"
+        #self.__pass = "bayern"
         #self.__db = "test"
         self.__db = "esa"
         self.__conn = MySQLdb.connect(self.__server, self.__user, self.__pass, self.__db)
@@ -57,11 +57,11 @@ class Connection(object):
 if __name__ == '__main__':
     
     con = Connection()
-    #con.add_entity("claro")                   
+    con.add_entity("claro")                   
     
     atributo = ["claro es una pesima empresa" , -1]
     
-    con.add_attribute("movistar", atributo)
+    con.add_attribute("claro", atributo)
     
     
         
