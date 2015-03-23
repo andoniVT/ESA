@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `comentario` (
   `id_entidad` int(10) NOT NULL,
   PRIMARY KEY (`id_comentario`),
   KEY `id_entidad` (`id_entidad`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `comentario`
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `entidad` (
   `id_entidad` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` text COLLATE utf8_spanish2_ci NOT NULL,
   PRIMARY KEY (`id_entidad`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `entidad`
