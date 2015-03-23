@@ -72,7 +72,10 @@ class Segmentation(object):
         
 if __name__ == '__main__':
     
-    seg = Segmentation("Felicitaciones al Real Madrid, en las buenas y en las malas Visca Barza!")
+    #seg = Segmentation("Felicitaciones al Real Madrid, en las buenas y en las malas Visca Barza!")
+    
+    text = "El mejor del F.C Barcelona en la final en mi opinión fue Pinto, el mejor del Real Madrid aunque no marcó fue Benzema, tiene mucha calidad."
+    seg = Segmentation(text)
     
     segmentos = seg.find_sentences()
     for i in segmentos:

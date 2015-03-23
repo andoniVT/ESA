@@ -63,7 +63,3 @@ if __name__ == '__main__':
     
     con.add_attribute("claro", atributo)
     
-    
-        
-        
-

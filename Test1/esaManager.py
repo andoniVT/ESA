@@ -45,8 +45,8 @@ if __name__ == '__main__':
     #p = "El Barza en 7 dias ha quedado fuera de la lucha por los titulos. Hacen falta cambios tanto en la plantilla como en el estilo"
     #p = "movistar es una pesima empresa sin embargo me gustan sus celulares"
     #p = "Siendo un defensor del trabajo de Mourinho, no dejo de admirar la naturalidad en la victoria de un tecnico como Ancelotti"
-    p = "Felicitaciones al Real Madrid, en las buenas y en las malas Visca Barza!" 
-    entidades_detectadas = ["Real Madrid" , "Barza"]
+    p = "Felicitaciones al Real_Madrid, en las buenas y en las malas Visca Barza!" 
+    entidades_detectadas = ["Real_Madrid" , "Barza"]
     #entidades_detectadas = ["movistar" , "empresa" , "celulares"]
     print "errores de frases"
     manager = EntitySA()

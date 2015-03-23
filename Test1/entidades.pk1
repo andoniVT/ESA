@@ -31,59 +31,70 @@ aS'mal visc barz !'
 p16
 aI00
 aF-0.25
-aaaa(lp17
-S'titulos'
+aa(lp17
+S'en las malas Visca Barza!'
 p18
-a(lp19
-(lp20
+aS'mal visc barz !'
+p19
+aI00
+aF-0.25
+aaaa(lp20
+S'titulos'
+p21
+a(lp22
+(lp23
 g6
 ag7
 aI00
 aF0
-aaaa(lp21
+aaaa(lp24
 S'plantilla'
-p22
-a(lp23
-(lp24
-S'Hacen falta cambios tanto en la plantilla como en el estilo'
 p25
+a(lp26
+(lp27
+S'Hacen falta cambios tanto en la plantilla como en el estilo'
+p28
 aS'hac falt cambi plantill estil'
-p26
+p29
 aI00
 aF-0.20000000000000001
-aaaa(lp27
+aaaa(lp30
 S'Mourinho'
-p28
-a(lp29
-(lp30
-S'Siendo un defensor del trabajo de Mourinho,'
 p31
+a(lp32
+(lp33
+S'Siendo un defensor del trabajo de Mourinho,'
+p34
 aS'siend defensor trabaj mourinh ,'
-p32
+p35
 aI00
 aF0.20000000000000001
-aaaa(lp33
+aaaa(lp36
 S'tecnico'
-p34
-a(lp35
-(lp36
-S'no dejo de admirar la naturalidad en la victoria de un tecnico como Ancelotti'
 p37
-aS'no dej admir natural victori tecnic ancelotti'
-p38
-aI01
-aF-0.42857142857142855
-aaaa(lp39
-S'Ancelotti'
+a(lp38
+(lp39
+S'no dejo de admirar la naturalidad en la victoria de un tecnico como Ancelotti'
 p40
-a(lp41
-(lp42
-g37
-ag38
+aS'no dej admir natural victori tecnic ancelotti'
+p41
 aI01
 aF-0.42857142857142855
-aaaa(lp43
+aaaa(lp42
+S'Ancelotti'
+p43
+a(lp44
+(lp45
+g40
+ag41
+aI01
+aF-0.42857142857142855
+aaaa(lp46
 S'Real Madrid'
-p44
-a(lp45
+p47
+a(lp48
+aa(lp49
+S'Real_Madrid'
+p50
+a(lp51
 aa.
