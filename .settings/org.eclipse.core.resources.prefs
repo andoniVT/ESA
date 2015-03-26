@@ -8,3 +8,7 @@ encoding//Test2/entityManager.py=utf-8
 encoding//Test2/esaManager.py=utf-8
 encoding//Test2/textProcesser.py=utf-8
 encoding//Test2/textSegmentation.py=utf-8
+encoding//Test3/classifier.py=utf-8
+encoding//Test3/corpus.py=utf-8
+encoding//Test3/manager_rule.py=utf-8
+encoding//Test3/parameter_text.py=utf-8
