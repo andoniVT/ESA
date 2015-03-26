@@ -151,6 +151,7 @@ class Comment_proccesor(object):
         pattern = re.compile(r"(.)\1{1,}", re.DOTALL)
         
         self.__negation = self.detect_negation(comentario)
+        
                 
         if self.__flag:
             comentario = self.remove_stop_word(comentario)

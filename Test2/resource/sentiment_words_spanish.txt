@@ -1,4 +1,6 @@
 abandon==-2
+felicit==1
+felic==1
 ability==1
 abomin==-2
 arruin==-2
