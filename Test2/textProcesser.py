@@ -146,6 +146,9 @@ class Comment_proccesor(object):
         comentario = self.processHashTag(comentario)
         comentario = comentario.strip('\'"')
         comentario = self.remove_punctuation(comentario)
+        
+        prueba = "en las buenas y en las malas"
+        print self.lemmatized_comment(prueba)
                 
         
         pattern = re.compile(r"(.)\1{1,}", re.DOTALL)

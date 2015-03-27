@@ -36,7 +36,8 @@ class SAClassifier(object):
     def classify(self, comment):
         obj = Classifier()
         obj.classify(comment)
-        sentiment = obj.get_label()
+        #sentiment = obj.get_label()
+        sentiment = obj.get_score()
         return sentiment
     
 class EntitySA(object):
@@ -54,6 +55,7 @@ class EntitySA(object):
         manager = SAClassifier()
         
         for i in segmentos:
+            print i 
             proc = CP(i)
             texto_sin_signos = proc.remove_punctuation(i)            
             for j in entidades_detectadas:
@@ -62,11 +64,36 @@ class EntitySA(object):
                     if k==j:
                         polaridad = manager.classify(i)
                         em.add_atributte(j, i, polaridad)
-                        print j + ": "  + polaridad
+                        print j + ": "  + str(polaridad)
                          
 if __name__ == '__main__':
+    #comment = "movistar es una pesima empresa , claro es mucho mejor"
+    #comment = "El Barza en 7 dias ha quedado fuera de la lucha por los titulos. Hacen falta cambios tanto en la plantilla como en el estilo"
+    #comment = "movistar es una pesima empresa sin embargo me gustan sus celulares"
+    #comment = "Siendo un defensor del trabajo de Mourinho, no dejo de admirar la naturalidad en la victoria de un tecnico como Ancelotti"
+    #comment = "Felicitaciones al Real_Madrid, en las buenas y en las malas Visca Barza!"
+    comment = "El mejor del F.C Barcelona en la final en mi opinion fue Pinto, el mejor del Real_Madrid aunque no marco fue Benzema, tiene mucha calidad."
+    text2 = "Tranquilos, messi se esta dosificando para el mundial... Que tiemble brasil!!"
+    text3 = "Mi casa, mi familia, mi novia y mi Madrid ganando la copa al Barza...no se puede pedir nada más. #HalaMadrid"
+    text4 = "Donde están los que decían que Gareth_Bale no valía cien millones? Jaja Habladores! HALA MADRID"
+    text6 = "Si no os digo cada vez que habla Ramos lo mucho que me encanta su voz y su acento tampoco me quedo tranquila"
+    text7 = "Alves echate unos bailes con Neymar para celebrar la copa del rey , del MADRID !! #HalaMadrid !"
+    text8 = "Una lectura positiva de todo esto, los señores Messi y Neymar ya podéis pensar en el mundial de los cojones. Id tranquilos chicos"
+    text9 = "Sergio_Ramos subiendo a recoger la copa con la bandera del Betis pa tocar los cojones"
+    text10 = "Real como no quererte si siempre demuestras quien eres en la cancha"
+    entidades_detectadas = ["Real"]
     
-    entidades_detectadas = ["movistar" , "empresa" , "claro"]
-    comment = "movistar es una pesima empresa , claro es mucho mejor"
+    manager = EntitySA()    
+    manager.classify(text10, entidades_detectadas)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 

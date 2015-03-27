@@ -19,3 +19,4 @@ por que == -1
 bast ya == -1  
 se corta == -1  
 no pas nad == -2
+en las buen y en las mal == 1
