@@ -12,7 +12,7 @@ from unicodedata import normalize
 from Test3.split import separar
 import snowballstemmer
 from Test3.settings import stop_words
-
+import string
 stopWordFile = stop_words
 
 class Comment_proccesor(object):
@@ -152,6 +152,15 @@ class Comment_proccesor(object):
                     new_word += word[i]
             return new_word 
 
+    def remove_punctuation(self, comentario):
+        signos = ['$' , '1' , '2'  , '4' , '5' , '6' , '7' , '¿' , '¡' , ',']
+        for c in signos:
+            comentario = comentario.replace(c , "")
+
+        for c in string.punctuation:
+            comentario = comentario.replace(c , "")
+        return comentario 
+    
     def get_processed_comment(self):
         return self.__new_comment
 
