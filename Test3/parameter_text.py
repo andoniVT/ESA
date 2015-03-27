@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 '''
-Created on 26/10/2014
+Created on 15/11/2014
 
-@author: Andoni Valverde Tohalino
-@email: andoni.valverde@ucsp.edu.pe
-
+@author: andoni
 '''
 
 import re 
@@ -13,10 +11,7 @@ import Test3.settings as settings
 import Test3.corpus as corpus
 from Test3.term import Term
 from Test3.manager_rule import Manager , Pattern
-import Test3.textProcesser as CP
-
-# remove_punctuation_marks     process_comment
-
+import Test3.commentPreprocessor as CP 
 
 class ParameterText(object):
     def __init__(self):
@@ -46,8 +41,7 @@ class ParameterText(object):
         self.__combinations = corpus.combinations_list(settings.COMBINATIONS_SPANISH, settings.COMBINATIONS_SLANGS_PERUVIAN)
 
     def evaluate(self, comment):        
-        proccess = CP.Comment_proccesor(comment , 0)
-        #comment = process_comment(comment)
+        proccess = CP.Comment_proccesor(comment , False)
         comment = proccess.get_processed_comment()
         self.__comment = comment
         comment = self.__search_combinations(comment)

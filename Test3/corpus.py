@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 '''
-Created on 26/10/2014
+Created on 15/11/2014
 
-@author: Andoni Valverde Tohalino
-@email: andoni.valverde@ucsp.edu.pe
+@author: andoni
 '''
 
 import Test3.settings as settings
@@ -85,3 +84,5 @@ def replace_tilde(word):
     word= word.replace("\xF3", "o")
     word= word.replace("\xFA", "u")
     return word 
+
+

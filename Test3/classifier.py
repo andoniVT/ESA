@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 '''
-Created on 26/10/2014
+Created on 15/11/2014
 
-@author: Andoni Valverde Tohalino
-@email: andoni.valverde@ucsp.edu.pe
-
+@author: andoni
 '''
 
 from Test3.parameter_text import ParameterText
