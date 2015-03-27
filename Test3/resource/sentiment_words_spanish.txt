@@ -558,7 +558,7 @@ quebr == -1
 quej == -1
 quer == 1
 quier == 1
-rabi == -1
+rabi == -2
 racism == -1
 radiant == 1
 rap == 1

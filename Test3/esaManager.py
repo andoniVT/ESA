@@ -81,10 +81,19 @@ if __name__ == '__main__':
     text8 = "Una lectura positiva de todo esto, los señores Messi y Neymar ya podéis pensar en el mundial de los cojones. Id tranquilos chicos"
     text9 = "Sergio_Ramos subiendo a recoger la copa con la bandera del Betis pa tocar los cojones"
     text10 = "Real como no quererte si siempre demuestras quien eres en la cancha"
-    entidades_detectadas = ["Real"]
+    text11 = "Tanto Messi y Neymar y al final el Madrid sin Cristiano gana la copa"
+    text12 = "Su salvador supremo Messi no pateo ni una lata en ese partido, la burla"
+    text13 = "Si le dan la copa a Cristiano lloro de seguro"
+    text14 = "Y por último, grandísima noticia la vuelta del Bale de la Premier, a los espacios y sin Cristiano, él gana partidos. Mucho mejor que Neymar"
+    text15 = "Me da rabia que el Real_Madrid haya ganado, pero es lo qie hay"
+    text16 = "Como juega mi Madrid como se quedan los catalanes HALA MADRID"
+    text18 = "espectacular el Madrid y Gareth_Bale.  2-1 y para casa los del Barza jajaja"
+    text19 = "Cuantaaaa felicidad despues de una tarde perfecta , el Madrid ganaaa la copa del rey al Barza!"
+    text20 = "El Barza tiene que hacer muchos cambios, empezando por la directiva"
+    entidades_detectadas = ["Barza"]
     
     manager = EntitySA()    
-    manager.classify(text10, entidades_detectadas)
+    manager.classify(text20, entidades_detectadas)
     
     
     
