@@ -65,6 +65,15 @@ class EntitySA(object):
                         polaridad = manager.classify(i)
                         em.add_atributte(j, i, polaridad)
                         print j + ": "  + str(polaridad)
+    
+    def analyze_entity(self, nombre_entidad):
+        em = EM()
+        per_values = em.get_values(nombre_entidad)
+        print "menciones: " + str(per_values[0])
+        print "positivos: " + str(round(per_values[1],2)) + "%"
+        print "neutros: " + str(round(per_values[2],2)) + "%"
+        print "negativos: " + str(round(per_values[3],2)) + "%"
+         
                          
 if __name__ == '__main__':
     #comment = "movistar es una pesima empresa , claro es mucho mejor"
@@ -90,19 +99,13 @@ if __name__ == '__main__':
     text18 = "espectacular el Madrid y Gareth_Bale.  2-1 y para casa los del Barza jajaja"
     text19 = "Cuantaaaa felicidad despues de una tarde perfecta , el Madrid ganaaa la copa del rey al Barza!"
     text20 = "El Barza tiene que hacer muchos cambios, empezando por la directiva"
-    entidades_detectadas = ["Barza"]
+    text21 = "Cuidado que a Ramos no se le caiga esta vez la Copa_del_Rey :)"
+    
+    entidades_detectadas = ["Ramos" , "CopadelRey"]
     
     manager = EntitySA()    
-    manager.classify(text20, entidades_detectadas)
+    manager.classify(text21, entidades_detectadas)
+    
+    manager.analyze_entity("Ramos")
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-
-

@@ -22,36 +22,22 @@ class EManager(object):
     
     def add_atributte(self, entidad, texto, polaridad):
         atributo = [texto, polaridad]
-        self.__con.add_attribute(entidad, atributo) 
-        
-    def load_value(self, word):
-        lista = dict()
-        file = open(vocabulary, 'r')
-        file2 = open(vocabulary2, 'r')  
-        files = [file, file2]
-        for i in files:
-            while True:
-                line = i.readline()
-                if not line: break;
-                tmp = re.split("=", line)
-                lista[tmp[0]] = tmp[2].rstrip()
-        if lista.has_key(word):
-            return int(lista[word])
-        else:
-            return 0
-        
-    def find_polarity(self, texto, negation):
-        suma = 0.0
-        n = 0
-        lista = texto.split()
-        for i in lista:
-            suma+=self.load_value(i)
-            n+=1
-        value = suma/n 
-        if negation:
-            value = -value
-        return value 
+        self.__con.add_attribute(entidad, atributo)
     
+    def percent(self, total, value):
+        return (100*value)/float(total)
+    
+    def get_values(self , nombre_entidad):
+        valores = self.__con.get_polarity(nombre_entidad)
+        total = sum(valores)
+        result = []
+        result.append(total)        
+        for i in valores:
+            value = self.percent(total, i)
+            result.append(value)
+        return result 
+                 
+
     def polarity_rule(self, value):
         if value>0: return "positivo"
         if value<0: return "negativo"
@@ -64,4 +50,9 @@ class EManager(object):
 if __name__ == '__main__':
     
     e = EManager()
-    print e.load_value("misio") 
+    #print e.percent(89, 16)
+    print e.get_values("Barza")
+    #print e.load_value("misio")
+    
+    
+      

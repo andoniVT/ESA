@@ -53,15 +53,35 @@ class Connection(object):
             
         else:
             print "Entidad no existe"
-                  
+    
+    def get_polarity(self, nombre_entidad):
+        positivos = 0
+        negativos = 0
+        neutros = 0
+        c = self.__conn.cursor()
+        consulta = 'SELECT * FROM entidad WHERE nombre="%s"' %(nombre_entidad,) + ";"
+        c.execute(consulta)
+        rows = c.fetchall()
+        if len(rows)!= 0:
+            consulta2 = 'select polaridad FROM entidad e, comentario2 c WHERE e.id_entidad=c.id_entidad AND e.nombre="%s"' % (nombre_entidad,) + ";"
+            c.execute(consulta2)
+            values = c.fetchall()
+            for i in values:
+                if i[0] == 0: neutros+=1
+                if i[0] > 0: positivos+=1
+                if i[0] < 0: negativos+=1                    
+            #print consulta2
+        else:
+            print "Entidad no existe!"
+        
+        return [positivos,  neutros , negativos]          
 
 
 if __name__ == '__main__':
     
     con = Connection()
-    con.add_entity("claro")                   
     
-    atributo = ["claro es una pesima empresa" , -1]
     
-    con.add_attribute("claro", atributo)
+    val = con.get_polarity("movistar")
+    print val 
     
