@@ -31,10 +31,11 @@ class EManager(object):
         valores = self.__con.get_polarity(nombre_entidad)
         total = sum(valores)
         result = []
-        result.append(total)        
-        for i in valores:
-            value = self.percent(total, i)
-            result.append(value)
+        if(total!=0):
+            result.append(total)        
+            for i in valores:
+                value = self.percent(total, i)
+                result.append(value)
         return result 
                  
 

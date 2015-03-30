@@ -69,10 +69,11 @@ class EntitySA(object):
     def analyze_entity(self, nombre_entidad):
         em = EM()
         per_values = em.get_values(nombre_entidad)
-        print "menciones: " + str(per_values[0])
-        print "positivos: " + str(round(per_values[1],2)) + "%"
-        print "neutros: " + str(round(per_values[2],2)) + "%"
-        print "negativos: " + str(round(per_values[3],2)) + "%"
+        if len(per_values)!=0:
+            print "menciones: " + str(per_values[0])
+            print "positivos: " + str(round(per_values[1],2)) + "%"
+            print "neutros: " + str(round(per_values[2],2)) + "%"
+            print "negativos: " + str(round(per_values[3],2)) + "%"
          
                          
 if __name__ == '__main__':
@@ -100,12 +101,15 @@ if __name__ == '__main__':
     text19 = "Cuantaaaa felicidad despues de una tarde perfecta , el Madrid ganaaa la copa del rey al Barza!"
     text20 = "El Barza tiene que hacer muchos cambios, empezando por la directiva"
     text21 = "Cuidado que a Ramos no se le caiga esta vez la Copa_del_Rey :)"
+    text22 = "Que supremacia la de Bale se los dije, EL PRÍNCIPE GALES Bale  haciendo añicos al Barza."
+    text23 ="Los q hoy están Jodidos con el Barza, recuerden q estos saldrán hoy de fiesta y les importa una mierda empezando por Alves y por Neymar"
     
-    entidades_detectadas = ["Ramos" , "CopadelRey"]
+    
+    entidades_detectadas = [ "Barza" , "Alves" , "Neymar"]
     
     manager = EntitySA()    
-    manager.classify(text21, entidades_detectadas)
+    #manager.classify(text23, entidades_detectadas)
     
-    manager.analyze_entity("Ramos")
+    manager.analyze_entity("Neymar")
     
     

@@ -1,5 +1,7 @@
 abandon == -2
 ability == 1
+felicit == 1
+felic == 1
 abomin == -2
 aborrec == -2
 abort == -2
@@ -556,7 +558,7 @@ quebr == -1
 quej == -1
 quer == 1
 quier == 1
-rabi == -1
+rabi == -2
 racism == -1
 radiant == 1
 rap == 1

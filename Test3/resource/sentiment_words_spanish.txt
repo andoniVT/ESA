@@ -9,6 +9,7 @@ abraz == 1
 absurd == -1
 abund == 1
 aburr == -2
+supremaci==2
 abus == -2
 accident == -1
 acid == -2

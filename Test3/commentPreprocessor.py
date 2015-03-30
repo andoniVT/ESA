@@ -131,6 +131,9 @@ class Comment_proccesor(object):
         for c in signos:
             comentario = comentario.replace(c , "")
         
+        
+        
+        
         pattern = re.compile(r"(.)\1{1,}", re.DOTALL)
         if self.__flag:
             comentario = self.remove_stop_word(comentario)
@@ -172,4 +175,7 @@ if __name__ == '__main__':
     for i in comentarios:
         procesador = Comment_proccesor(i , True)
         print procesador.get_processed_comment()
+        
+    procesador = Comment_proccesor("hola que" , True)
+    print procesador.process_comment("supremacia")
 
