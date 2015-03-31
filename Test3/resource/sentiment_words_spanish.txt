@@ -1,6 +1,7 @@
 abandon == -2
 ability == 1
 felicit == 1
+fatal == -2
 felic == 1
 abomin == -2
 aborrec == -2

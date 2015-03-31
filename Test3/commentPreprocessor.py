@@ -177,5 +177,5 @@ if __name__ == '__main__':
         print procesador.get_processed_comment()
         
     procesador = Comment_proccesor("hola que" , True)
-    print procesador.process_comment("supremacia")
+    print procesador.process_comment("fatal")
 

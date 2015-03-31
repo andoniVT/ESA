@@ -70,6 +70,7 @@ class EntitySA(object):
         em = EM()
         per_values = em.get_values(nombre_entidad)
         if len(per_values)!=0:
+            print "Entidad " + nombre_entidad + ": "
             print "menciones: " + str(per_values[0])
             print "positivos: " + str(round(per_values[1],2)) + "%"
             print "neutros: " + str(round(per_values[2],2)) + "%"
@@ -103,13 +104,21 @@ if __name__ == '__main__':
     text21 = "Cuidado que a Ramos no se le caiga esta vez la Copa_del_Rey :)"
     text22 = "Que supremacia la de Bale se los dije, EL PRÍNCIPE GALES Bale  haciendo añicos al Barza."
     text23 ="Los q hoy están Jodidos con el Barza, recuerden q estos saldrán hoy de fiesta y les importa una mierda empezando por Alves y por Neymar"
+    text24 = "Me voy a cenar. Enhorabuena a los aficionados merengues. Lo del Barza es para hacérselo mirar,en una semana temporada en blanco. PATÉTICO!"
+    text25 = "buen partido de los mandriles. ahora si, me da pena que el reportero de tve no busque la entrevista con Bale #nohablamosingles"
+    text26 = "Los del Barcelona estan alterados no se , puras excusas"
+    text27 = "Lo mataría al relator, a los del Real y mas a Cristiano! Ah, y a los ""simpatizantes"" del Real"
+    text28 = "El Tata_Martino se gana solito la destitucion, Alexis y Pedro estan muchisimo mejores que Neymar, pero la plata es la que juega"
+    text29 = "Triunfo merecido, messi desaparecido, Pinto fatal un equipo de primer nivel se merece un portero al menos de garantias y que tenga reflejos"
+    text30 = "El Barcelona gana un titulo y es una temporada mediocre, el Madrid gana una copa y es un temporadon!!"
     
-    
-    entidades_detectadas = [ "Barza" , "Alves" , "Neymar"]
-    
+    entidades_detectadas = [ "Barcelona" , "Madrid" ]    
     manager = EntitySA()    
-    #manager.classify(text23, entidades_detectadas)
     
-    manager.analyze_entity("Neymar")
+    manager.classify(text30, entidades_detectadas)
+    
+    manager.analyze_entity("Barcelona")
+    manager.analyze_entity("Madrid")
+    
     
     

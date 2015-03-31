@@ -38,7 +38,7 @@ class Connection(object):
             c.execute(consulta2)
             print consulta2
         else:
-            print "Entidad ya existe!"
+            print "Entidad " + nombre_entidad +  " ya existe!"
     
     def add_attribute(self, nombre_entidad, atributo):
         c = self.__conn.cursor()
@@ -52,7 +52,7 @@ class Connection(object):
             print consulta2
             
         else:
-            print "Entidad no existe"
+            print "Entidad " + nombre_entidad +  " no existe!"
     
     def get_polarity(self, nombre_entidad):
         positivos = 0
@@ -72,7 +72,7 @@ class Connection(object):
                 if i[0] < 0: negativos+=1                    
             #print consulta2
         else:
-            print "Entidad no existe!"
+            print "Entidad " + nombre_entidad +  " no existe!"
         
         return [positivos,  neutros , negativos]          
 
