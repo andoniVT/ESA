@@ -18,6 +18,15 @@ out = open(filename2 , "wb")
 pickle.dump(tokenizer, out)
 out.close()
 
+file = open(filename2, 'r')
+segmenter = pickle.Unpickler(file).load()
+
+text = "El Barcelona gana un titulo y es una temporada mediocre. el Madrid gana una copa . es un temporadon"
+sentences = segmenter.tokenize(text)
+
+for i in sentences:
+    print i               
+
 
 
 
