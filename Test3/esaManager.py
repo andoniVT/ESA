@@ -115,7 +115,7 @@ if __name__ == '__main__':
     entidades_detectadas = [ "Barcelona" , "Madrid" ]    
     manager = EntitySA()    
     
-    manager.classify(text30, entidades_detectadas)
+    #manager.classify(text30, entidades_detectadas)
     
     manager.analyze_entity("Barcelona")
     manager.analyze_entity("Madrid")
