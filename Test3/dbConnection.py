@@ -8,6 +8,10 @@ Created on 20/3/2015
 
 # tablas: entidad - comentario
 
+'''
+ mysql --user=root -p
+'''
+
 import MySQLdb
 
 class Connection(object):
