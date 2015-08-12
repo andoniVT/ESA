@@ -1,0 +1,38 @@
+
+1 Intro
+2 Representacion matematica de comentarios
+3 Corpus de Entrenamiento
+4 Algoritmos de clasificacion supervisados: SVM- DT - ME- NB
+5 Resultados de evaluacion
+   * Entrnamiento y prueba
+   * Tecnicas para evaluar los resultados P-R-FM
+   * Evaluacion en primera etapas
+   * Evaluación en segunda etapa
+   * Comparativos entre clasificadores
+
+
+
+1. Introducción
+2. 
+3.
+4.
+5.
+
+
+
+
+ [----comentario--------]  ---> (segmentacion)  [[s1][s2][s3][sn]]   
+
+ [sacar entidad por cada oracion] --> f([s1]) , f([s2]) , f([s3], f([s4])) --> (E1 E2) ->P , P , N , P
+
+
+
+
+
+
+
+
+
+
+
+
