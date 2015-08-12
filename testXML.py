@@ -4,10 +4,25 @@ from elementtree.ElementTree import ElementTree
 
 xml = "stompol-tweets-train-tagged.xml"
 
+def prueba():
+	arch = open(xml , 'r')
+	for lines in arch:
+		lines = lines.rstrip()
+		aux = lines.find(">")+1
+		lines = lines[aux:]
+		aux = lines.find("</tweet>")
+		lines = lines[:aux]
+		print lines
+	
+	
+	
+
 if __name__ == '__main__':
 	
 	arch = open(xml , 'r')
+	prueba()
 		
+	'''
 	for lines in arch:
 		lines = lines.rstrip()
 		aux = lines.find(">")+1
@@ -51,7 +66,8 @@ if __name__ == '__main__':
 		texto3 = texto3[:aux]
 		texto = texto + texto3
 		print texto
-		print " "   
+		print " "
+	'''   
 	
 	
 	'''
@@ -64,3 +80,7 @@ if __name__ == '__main__':
 			print child.text
 		#print element.attrib
 	'''
+	
+	
+
+	
