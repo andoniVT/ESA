@@ -3,10 +3,10 @@
 
 
 xml = "stompol-tweets-train-tagged.xml"
-
+xml2 = "socialtv-tweets-train-tagged.xml"
 
 def prueba():
-	arch = open(xml , 'r')
+	arch = open(xml2 , 'r')
 	comentarios = []
 	for lines in arch:
 		comentario = []
@@ -45,15 +45,18 @@ def prueba():
 			lines = texto3
 			contenido = [texto, entity, polarity]
 			
-			print contenido
-			#comentario.append(contenido)
+			#print contenido
+			comentario.append(contenido)
 			
-			print " "
-		#comentarios.append(comentario)
-		print "---"
+			#print " "
+		comentarios.append(comentario)
+		#print "---"
+		
+	for i in comentarios:
+		print i 
 		
  
-			#print lines
+		
 	
 	
 	
