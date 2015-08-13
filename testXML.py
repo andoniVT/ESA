@@ -1,8 +1,9 @@
-import elementtree.ElementTree as ET
-from elementtree.ElementTree import ElementTree
+#import elementtree.ElementTree as ET
+#from elementtree.ElementTree import ElementTree
 
 
 xml = "stompol-tweets-train-tagged.xml"
+
 
 def prueba():
 	arch = open(xml , 'r')
@@ -12,6 +13,9 @@ def prueba():
 		lines = lines[aux:]
 		aux = lines.find("</tweet>")
 		lines = lines[:aux]
+		
+		aux = lines.find("<sentiment")
+		print aux 
 		print lines
 	
 	
