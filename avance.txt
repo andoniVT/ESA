@@ -29,6 +29,9 @@
 
   
 
+comentario =[["segmento 1" , "entidad" , "polaridad"] , ["segmento 2" , "entidad" , "polaridad"]] 
+
+
 
 
 

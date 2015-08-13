@@ -1,0 +1,40 @@
+['Diga cuanto nos van a costar las autovias de sus amiguetes \xc2\xbf4500 millones o mas ?  @EsperanzAguirre @PPopular', 'Partido_Popular', 'N']
+ 
+---
+['@lhermoso_ @sanchezcastejon #DobleMoral Castilla antes que Aragon...', 'Partido_Socialista_Obrero_Espanol', 'N']
+ 
+---
+[' @PSOE @sanchezcastejon Me hace mucha gracia que esa afirmacion la haga el PSOE', 'Partido_Socialista_Obrero_Espanol', 'N']
+ 
+---
+['Para que todo el mundo lo tengo claro .... @CsAlzira_  https://t.co/kcDxbhu3Ha', 'Ciudadanos', 'NEU']
+ 
+---
+[' @Albert_Rivera', 'Ciudadanos', 'N']
+ 
+[' y @CiudadanosCs saben q este pais es progresista pero q se arruga y vota centro. Discurso moderado y electoralista.', 'Ciudadanos', 'N']
+ 
+---
+[' @sanchezcastejon Todos los castellanos deberiamos celebrar. No solo los del norte. En C-LM el festivo es 1 tonta fecha admva. #Propuesta', 'Partido_Socialista_Obrero_Espanol', 'NEU']
+ 
+---
+['@SooZLetras @iunida @IUCM No conozco los detalles, pero los valores y los principios me importan mas de lo que me preocupan las disensiones', 'Izquierda_Unida', 'NEU']
+ 
+---
+['@cesarpopmadrid lo comprendo, pero esos valores y principios estan mejor representados en otras candidaturas de @iunida y no en la de @IUCM.', 'Izquierda_Unida', 'N']
+ 
+---
+[' Los que esta noche van a la redonda a celebrar la victoria', 'Aficion', 'P']
+ 
+[' del Real Madrid', 'Equipo-Real_Madrid', 'P']
+ 
+[' les espero para cuando suba el @realmurciacfsad a primera.', 'Equipo', 'P']
+ 
+---
+['Diooooos que careron de gareth', 'Jugador-Gareth_Bale', 'P']
+ 
+[' madreeeeee ahi estan los jugadores importantes decidiendo partidos', 'Partido', 'NEU']
+ 
+[' vamos conioooooooo jajaja hala madrid', 'Equipo-Real_Madrid', 'P']
+ 
+---
