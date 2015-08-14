@@ -36,6 +36,17 @@ comentario =[["segmento 1" , "entidad" , "polaridad"] , ["segmento 2" , "entidad
 
 
 
+pre procesamiento
+entrenamiento
+clasificacion
+
+pruebas con comentarios:
+entidades mas nombradas porcentajes : positivos - negativos - neutros       
+10 entidades ->  
+
+luego para cada entidad P - R -FM
+10 entidades
+
 
 
 
