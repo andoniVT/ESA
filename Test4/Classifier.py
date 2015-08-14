@@ -89,5 +89,5 @@ if __name__ == '__main__':
     test = [[1,2,3],[3,2,1]]
     print obj.classify(test)
     
-    
+
     

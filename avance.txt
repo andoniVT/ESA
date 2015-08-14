@@ -13,32 +13,30 @@
 
 
 1. Introducción
-2. 
-3.
-4.
-5.
-
-
+2.  Clasificación de comentarios
+	2.1. Clasificación supervisada
+	2.2. Clasificación no supervisada
+3. Análisis de opiniones basado en entidades
+4. Corpus de entrenamiento
+5. Resultados de la evaluación del algoritmo de análisis de opiniones orientado a entidades
+6. Conclusiones
 
 
  [----comentario--------]  ---> (segmentacion)  [[s1][s2][s3][sn]]   
 
  [sacar entidad por cada oracion] --> f([s1]) , f([s2]) , f([s3], f([s4])) --> (E1 E2) ->P , P , N , P
-
-
-
   
 
 comentario =[["segmento 1" , "entidad" , "polaridad"] , ["segmento 2" , "entidad" , "polaridad"]] 
 
 
-
-
-
-
 pre procesamiento
-entrenamiento
+entrenamiento (supervisados)
 clasificacion
+    --> algoritmo supervisado            --> 0.3
+    --> algoritmo de votacion            --> 0.5
+    --> algoritmo de recursos lexicos    --> 0.2
+
 
 pruebas con comentarios:
 entidades mas nombradas porcentajes : positivos - negativos - neutros       
@@ -46,14 +44,3 @@ entidades mas nombradas porcentajes : positivos - negativos - neutros
 
 luego para cada entidad P - R -FM
 10 entidades
-
-
-
-
-
-
-
-
-
-
-
