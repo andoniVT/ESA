@@ -10,7 +10,7 @@ import cPickle
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import f1_score
-import elementtree.ElementTree as ET
+#import elementtree.ElementTree as ET
 
 
 testFile = "testFile.txt"
@@ -40,7 +40,7 @@ def expand(vector):
             result.append(0)
     return result
 
-'''
+
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
         cPickle.dump(data, fid)
@@ -49,7 +49,7 @@ def load_data_from_disk(file):
     with open(file, 'rb') as fid:
         data = cPickle.load(fid)
     return data  
-
+'''
 def get_polarity_from_file(file):
     lines = []
     with open(file) as f:

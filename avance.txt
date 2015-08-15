@@ -1,4 +1,4 @@
-
+-----------------------------------------------------------------------------
 1 Intro
 2 Representacion matematica de comentarios
 3 Corpus de Entrenamiento
@@ -9,7 +9,7 @@
    * Evaluacion en primera etapas
    * Evaluación en segunda etapa
    * Comparativos entre clasificadores
-
+---------------------------------------------------------------------------------
 
 
 1. Introducción
@@ -21,6 +21,8 @@
 5. Resultados de la evaluación del algoritmo de análisis de opiniones orientado a entidades
 6. Conclusiones
 
+_________________________________________________________________________________
+---------------------------------------------------------------------------------
 
  [----comentario--------]  ---> (segmentacion)  [[s1][s2][s3][sn]]   
 
@@ -44,3 +46,6 @@ entidades mas nombradas porcentajes : positivos - negativos - neutros
 
 luego para cada entidad P - R -FM
 10 entidades
+
+
+com
