@@ -63,7 +63,41 @@ class Reader(object):
         return comentarios
     
     def __readType2(self):
-        pass
+        arch = open(self.__file, 'r')
+        comentarios = []
+        for lines in arch:
+            comentario = []
+            lines = lines.rstrip()
+            aux = lines.find(">")+1
+            lines = lines[aux:]
+            aux = lines.find("</tweet>")
+            lines = lines[:aux]
+            aux = lines.find("<sentiment")
+            while aux != -1:
+                texto = lines[:aux]
+                lines = lines[aux:]
+                aux = lines.find("entity=")+8
+                entity = lines[aux:]
+                texto2 = entity
+                aux = entity.find(">")-1
+                entity = entity[:aux]
+                aux = texto2.find(">")+1
+                texto2 = texto2[aux:]
+                aux = texto2.find("</sentiment")
+                texto3 = texto2
+                texto2 = texto2[:aux]
+                texto = texto + texto2
+                aux = texto3.find(">")+1
+                texto3 = texto3[aux:]
+                aux = texto3.find("<sentiment")
+                if aux == -1:
+                    texto = texto + texto3
+                lines = texto3
+                contenido = [texto , entity]
+                comentario.append(contenido)
+            comentarios.append(comentario)
+        return comentarios
+                
     
     def getData(self):
         return self.__data

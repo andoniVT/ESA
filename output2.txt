@@ -1,0 +1,15 @@
+/usr/local/lib/python2.7/dist-packages/numpy/core/fromnumeric.py:2507: VisibleDeprecationWarning: `rank` is deprecated; use the `ndim` attribute or function instead. To find the rank of a matrix see `numpy.linalg.matrix_rank`.
+  VisibleDeprecationWarning)
+NEU
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N

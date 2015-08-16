@@ -19,8 +19,8 @@ class Connection(object):
     def __init__(self):
         self.__server = "localhost"
         self.__user = "root"
-        self.__pass = "jorgeandoni"
-        #self.__pass = "bayern"
+        #self.__pass = "jorgeandoni"
+        self.__pass = "bayern"
         #self.__db = "test"
         self.__db = "esa"
         self.__conn = MySQLdb.connect(self.__server, self.__user, self.__pass, self.__db)
@@ -83,9 +83,10 @@ class Connection(object):
 
 if __name__ == '__main__':
     
+    print "hello"
+    
     con = Connection()
-    
-    
-    val = con.get_polarity("movistar")
-    print val 
+    con.add_entity("Movistar")
+    #val = con.get_polarity("movistar")
+    #print val 
     
