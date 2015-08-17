@@ -11,13 +11,15 @@ class Reader(object):
     def __init__(self, xml_file, xml_type):
         self.__file = xml_file
         self.__type = xml_type
-        self.__data = self.read()
+        #self.__data = self.read()
     
     def read(self):
         if self.__type == 1:
             return self.__readType1()
         elif self.__type == 2:
             return self.__readType2()
+        elif self.__type == 3:
+            return self.__readType3()
     
     def __readType1(self):
         arch = open(self.__file, 'r')
@@ -97,16 +99,40 @@ class Reader(object):
                 comentario.append(contenido)
             comentarios.append(comentario)
         return comentarios
-                
+    
+    def __readType3(self):
+        arch = open(self.__file, 'r')
+        labels = []
+        for lines in arch:
+            label = []
+            lines = lines.rstrip()
+            aux = lines.find("-")
+            if aux == -1:
+                print lines
+            else:
+                while aux != -1:
+                    texto = lines[:aux]
+                    print  texto 
+                    lines = lines[aux+1:]
+                    aux = lines.find("-")
+                    if aux == -1:
+                        texto = lines
+                        print texto
+                                    
     
     def getData(self):
         return self.__data
 
 if __name__ == '__main__':
     
-    obj = Reader(xml, 1)
+    arc = "prueba.txt"
+    obj = Reader(arc, 3)
+    '''
     data = obj.read()
     for i in data:
-        print i 
+        print i
+    '''
+    
+    obj.read() 
         
     

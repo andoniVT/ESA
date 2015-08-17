@@ -10,6 +10,7 @@ from sklearn.linear_model import LogisticRegression as ME
 from sklearn.ensemble import RandomForestClassifier as RF
 from sklearn.svm import SVC
 
+
 class SupervisedClassifier(object):
     
     def __init__(self, data=None, labels=None , type=None):
