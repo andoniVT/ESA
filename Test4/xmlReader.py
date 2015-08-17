@@ -104,20 +104,20 @@ class Reader(object):
         arch = open(self.__file, 'r')
         labels = []
         for lines in arch:
-            label = []
             lines = lines.rstrip()
             aux = lines.find("-")
             if aux == -1:
-                print lines
+                labels.append(lines) 
             else:
                 while aux != -1:
                     texto = lines[:aux]
-                    print  texto 
+                    labels.append(texto)   
                     lines = lines[aux+1:]
                     aux = lines.find("-")
                     if aux == -1:
                         texto = lines
-                        print texto
+                        labels.append(texto)
+        return labels
                                     
     
     def getData(self):
@@ -131,8 +131,8 @@ if __name__ == '__main__':
     data = obj.read()
     for i in data:
         print i
-    '''
-    
-    obj.read() 
+    '''    
+    labels = obj.read()
+    print labels 
         
     

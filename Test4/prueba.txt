@@ -1,5 +1,5 @@
+P-N
 P
-P
-N-P
+N-P-NEU
 P-N-NEU
-NEU
+NEU-P-P-P
