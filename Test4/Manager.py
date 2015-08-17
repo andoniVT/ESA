@@ -9,6 +9,7 @@ from Test4.VectorModel import VectorModel as VM
 from Test4.Utils import write_data_to_disk , load_data_from_disk , expand 
 from Test4.Classifier import SupervisedClassifier as SC
 from Test4.dbConnection import Connection
+from Test4.unsupervisedClassifier import Unsupervised as VocAlg
 
 simpleVectorizer = "Models/simpleVectorizer.pk1"
 tfidfModel = "Models/tfidfModel.pk1"
@@ -98,7 +99,11 @@ class SentimentManager(object):
                 text_cleaned =  proc.get_processed_comment()
                 vector = model.get_comment_tf_idf_vector([text_cleaned])
                 result = classifier.classify(vector)
+                
+                voc =  VocAlg([comentario])
+                print voc.classify()[0]
                 print result[0][0] 
+                print " "
                 
         
                  

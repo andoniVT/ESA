@@ -19,6 +19,7 @@
 3. Análisis de opiniones basado en entidades
 4. Corpus de entrenamiento
 5. Resultados de la evaluación del algoritmo de análisis de opiniones orientado a entidades
+   
 6. Conclusiones
 
 _________________________________________________________________________________

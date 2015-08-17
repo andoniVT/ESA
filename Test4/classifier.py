@@ -57,9 +57,9 @@ class Classifier(object):
         return result
 
 class Option:
-    POSITIVE = 'positivo'
-    NEGATIVE = 'negativo'
-    NEUTRAL = 'neutral'
+    POSITIVE = 'P'
+    NEGATIVE = 'N'
+    NEUTRAL = 'NEU'
     UNDEFINED = 'no definido'
     NON_POSITIVE = 'no positivo'
     NON_NEGATIVE = 'no negativo'
