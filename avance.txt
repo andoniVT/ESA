@@ -66,4 +66,42 @@ luego para cada entidad P - R -FM
 10 entidades
 
 
-com
+ 
+
+entidades de prueba [10] A - B - C - D - E- F- G- ....
+
+entidad A | P | N | NEU | PROMEDIO 
+Precision    
+Recall
+F-Measure
+
+% Positivos para A
+% Negativos para A
+% Neutros para A
+
+
+entidad B | P | N | NEU | PROMEDIO 
+Precision    
+Recall
+F-Measure
+
+% Positivos para B
+% Negativos para B
+% Neutros para B
+
+
+entidad C | P | N | NEU | PROMEDIO 
+Precision    
+Recall
+F-Measure
+
+% Positivos para C
+% Negativos para C
+% Neutros para C
+
+entodad D
+
+
+
+
+

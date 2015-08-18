@@ -10,6 +10,7 @@ Created on 20/3/2015
 
 '''
  mysql --user=root -p
+ alter table entidad AUTO_INCREMENT=1
 '''
 
 import MySQLdb
@@ -19,8 +20,8 @@ class Connection(object):
     def __init__(self):
         self.__server = "localhost"
         self.__user = "root"
-        #self.__pass = "jorgeandoni"
-        self.__pass = "bayern"
+        self.__pass = "jorgeandoni"
+        #self.__pass = "bayern"
         #self.__db = "test"
         self.__db = "esa"
         self.__conn = MySQLdb.connect(self.__server, self.__user, self.__pass, self.__db)
@@ -44,14 +45,20 @@ class Connection(object):
         else:
             print "Entidad " + nombre_entidad +  " ya existe!"
     
-    def add_attribute(self, nombre_entidad, atributo):
+    def add_atributte(self, nombre_entidad, atributo, tipo):
         c = self.__conn.cursor()
         consulta = 'SELECT id_entidad FROM entidad WHERE nombre="%s"' %(nombre_entidad,) + ";"
         c.execute(consulta)
         rows = c.fetchall()
         if len(rows)!=0:            
             id_entidad = rows[0][0]
-            consulta2 = 'INSERT INTO comentario2 VALUES (NULL, "%s"' % (atributo[0],) + ", " + str(atributo[1]) + ", " + str(id_entidad) + ");"
+            consulta2 = ""
+            if tipo == 1:
+                consulta2 = 'INSERT INTO comentario VALUES (NULL, "%s"' % (atributo[0],) + ", " +'"%s"' % (atributo[1],) + ", " + str(id_entidad) + ");"
+                
+            else:
+                consulta2 = 'INSERT INTO comentario2 VALUES (NULL, "%s"' % (atributo[0],) + ", " +  '"%s"' %(atributo[1],) + ", " + str(id_entidad) + ");"
+                
             c.execute(consulta2)
             print consulta2
             

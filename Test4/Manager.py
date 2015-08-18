@@ -10,6 +10,7 @@ from Test4.Utils import write_data_to_disk , load_data_from_disk , expand
 from Test4.Classifier import SupervisedClassifier as SC
 from Test4.dbConnection import Connection
 from Test4.unsupervisedClassifier import Unsupervised as VocAlg
+from Test4.entityManager import EManager as EM
 
 simpleVectorizer = "Models/simpleVectorizer.pk1"
 tfidfModel = "Models/tfidfModel.pk1"
@@ -29,7 +30,7 @@ xmlTest = "testFile.xml"
 class SentimentManager(object):
     
     def __init__(self):
-        self.__coneccion = Connection()
+        self.__eManager = EM()
     
     def procesar(self, xml_file):
         comentarios = []
@@ -75,35 +76,37 @@ class SentimentManager(object):
             fClass = classifier.train()
             write_data_to_disk(fileClassifiers[i], fClass)
     
-    def testClassifiers(self):
-        test_data = []
-        
+    def testClassifiers(self, test_data):        
         vectorizer = load_data_from_disk(simpleVectorizer)
         transformer = load_data_from_disk(tfidfVectorizer)
         model = VM()
         model.set_models(vectorizer, transformer)
         fileClassifiers = [SVM, NB, ME, DT]
-        
         all_labels_predicted = []
-        obj = Reader(xmlTest, 2)
+        obj = Reader(test_data, 2)
         comentarios = obj.read()
         for i in comentarios:
-            for j in i:                
+            for j in i:
                 entidad = j[1]                
-                #self.__coneccion.add_entity(entidad)                
-                comentario = j[0] 
+                self.__eManager.add_entities(entidad) 
+                comentario = j[0]
                 supClass = load_data_from_disk(SVM)
                 classifier = SC()
                 classifier.set_classifier(supClass)
                 proc = TextCleaner(comentario)
                 text_cleaned =  proc.get_processed_comment()
-                vector = model.get_comment_tf_idf_vector([text_cleaned])
+                vector = model.get_comment_tf_idf_vector([text_cleaned])                
                 result = classifier.classify(vector)
+                polaridadSup =  result[0][0]
                 
                 voc =  VocAlg([comentario])
-                print voc.classify()[0]
-                print result[0][0] 
+                polaridadNSup =  voc.classify()[0]
+                 
                 print " "
+                
+                self.__eManager.add_atributte(entidad, text_cleaned, polaridadSup, 1)
+                self.__eManager.add_atributte(entidad, text_cleaned, polaridadNSup, 2)
+        
                 
         
                  
@@ -116,5 +119,5 @@ if __name__ == '__main__':
     #obj.prepareModels(xml)
     #obj.trainClassifiers(xml)
     
-    obj.testClassifiers()
+    obj.testClassifiers(xmlTest)
     
