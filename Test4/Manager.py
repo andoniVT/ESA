@@ -107,11 +107,7 @@ class SentimentManager(object):
                 self.__eManager.add_atributte(entidad, text_cleaned, polaridadSup, 1)
                 self.__eManager.add_atributte(entidad, text_cleaned, polaridadNSup, 2)
         
-                
-        
-                 
-        
-         
+                         
 
 if __name__ == '__main__':
     
