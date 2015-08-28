@@ -27,6 +27,14 @@ DT = "Classifiers/DT.pk1"
 xml = "stompol-tweets-train-tagged.xml"
 xmlTest = "testFile.xml"
 
+
+
+corpusTrain1 = "Corpus/socialtv-tweets-train-tagged.xml"
+corpusTrain2 = "Corpus/stompol-tweets-train-tagged.xml"
+corpusTest1 = "Corpus/socialtv-tweets-train-tagged.xml"
+corpusTest2 = "Corpus/socialtv-tweets-test.xml"
+
+
 class SentimentManager(object):
     
     def __init__(self):
@@ -111,9 +119,13 @@ class SentimentManager(object):
 
 if __name__ == '__main__':
     
-    obj = SentimentManager()
+    #obj = SentimentManager()
     #obj.prepareModels(xml)
     #obj.trainClassifiers(xml)
     
-    obj.testClassifiers(xmlTest)
+    #obj.testClassifiers(xmlTest)
+    obj = Reader(corpusTrain2, 1)
+    for i in obj.read():
+        for j in i:
+            print j 
     
